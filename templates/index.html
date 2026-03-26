@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Avtosalon</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+
+        /* Navbar */
+        header {
+            background: #111;
+            color: white;
+            padding: 15px 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        .nav a:hover {
+            color: orange;
+        }
+
+        /* Hero */
+        .hero {
+            height: 80vh;
+            background: url('https://via.placeholder.com/1200x600') no-repeat center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content h2 {
+            font-size: 40px;
+        }
+
+        .hero-content p {
+            margin: 10px 0;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            background: orange;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Cars */
+        .cars {
+            padding: 50px 0;
+        }
+
+        .cars h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .car-list {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .car-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 300px;
+            text-align: center;
+            transition: 0.3s;
+            border-radius: 10px;
+        }
+
+        .car-card:hover {
+            transform: scale(1.05);
+        }
+
+        .car-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="container nav">
+            <h1>AutoMarket</h1>
+            <nav>
+                <a href="{% url 'category-create' %}">Category qoshish</a>
+                <a href="#">Mashinalar</a>
+                <a href="#">Biz haqimizda</a>
+                <a href="#">Aloqa</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Orzuyingizdagi mashinani toping</h2>
+            <p>Eng yaxshi narxlar va sifat kafolati bilan</p>
+            <button>Ko‘rish</button>
+        </div>
+    </section>
+
+    <!-- Cars -->
+    <section class="cars container">
+        <h2>Mashinalar</h2>
+
+        <div class="car-list">
+            <div class="car-card">
+                <img src="https://via.placeholder.com/300x200">
+                <h3>BMW X5</h3>
+                <p>$45,000</p>
+            </div>
+
+            <div class="car-card">
+                <img src="https://via.placeholder.com/300x200">
+                <h3>Audi A6</h3>
+                <p>$40,000</p>
+            </div>
+
+            <div class="car-card">
+                <img src="https://via.placeholder.com/300x200">
+                <h3>Mercedes C-Class</h3>
+                <p>$42,000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 AutoMarket. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>
